@@ -5,15 +5,15 @@
 @font-face {
   font-family: Roboto;
   src: url("../fonts/") format("woff2"),
-    url("../fonts/Roboto-Italic.woff") format("woff");
+    /* url("../fonts/Roboto-Italic.woff") format("woff"); */
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "Roboto Condensed";
-  src: url("../fonts/RobotoCondensed-Italic.woff2") format("woff2"),
-    url("../fonts/RobotoCondensed-Italic.woff") format("woff");
+  /* src: url("../fonts/RobotoCondensed-Italic.woff2") format("woff2"), */
+    /* url("../fonts/RobotoCondensed-Italic.woff") format("woff"); */
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -89,7 +89,7 @@ body {
   background-color: var(--color-light-bg);
 }
 .orange-button:hover {
-  background-color: var(--color-green-hover);
+  background-color: var(--color-red);
   border-radius: 4px;
 }
 .header {
@@ -247,6 +247,7 @@ body {
 }
 .button-div,
 .cta-button {
+  width: 100%;
   padding: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -256,6 +257,7 @@ body {
 }
 .cta-button,
 .footer-link {
+  width: 100%;
   color: var(--color-white);
 }
 .cta-title {
@@ -267,8 +269,9 @@ body {
   max-width: 1440px;
 }
 .cta-button {
+
   display: flex;
-  width: 156px;
+  width: auto;
   height: 42px;
   font-size: 15px;
   border-radius: 8px;
@@ -333,6 +336,9 @@ body {
   .header-burger {
     display: block;
   }
+  .orange{
+    display: none;
+  }
 }
 @media (max-width: 690px) {
   .footer-links-wrapper,
@@ -348,10 +354,20 @@ body {
   .card-div {
     text-align: justify;
   }
+  .hero-text{
+    text-align: left;
+  }
+  .hero-title{
+    text-align: left;
+  }
 }
 @media (max-width: 450px) {
   .hero-title {
     font-size: 24px;
+    text-align: left;
+  }
+  .hero-text{
+    text-align: left;
   }
   .hero-img {
     height: 350px;
